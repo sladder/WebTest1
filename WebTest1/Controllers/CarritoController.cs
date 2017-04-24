@@ -46,7 +46,7 @@ namespace WebTest1.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CarritoID,Nombre,Descripcion,Stock,PrecioU")] Carrito carrito)
+        public ActionResult Create([Bind(Include = "CarritoID,Nombre,Descripcion,Stock,PrecioU,PrecioT")] Carrito carrito)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace WebTest1.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CarritoID,Nombre,Descripcion,Stock,PrecioU")] Carrito carrito)
+        public ActionResult Edit([Bind(Include = "CarritoID,Nombre,Descripcion,Stock,PrecioU,PrecioT")] Carrito carrito)
         {
             if (ModelState.IsValid)
             {

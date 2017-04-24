@@ -20,11 +20,17 @@ namespace WebTest1.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //public ApplicationDbContext() : base("Carritos") 
+        //{
+        //    Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
+        //}
+
         public DbSet<Carrito> Carritos { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
         }
 
         public static ApplicationDbContext Create()

@@ -13,6 +13,5 @@ namespace WebTest1.Models
         public int Stock { get; set; }
         public float PrecioU { get; set; }
         public float PrecioT { get; set; }
-
     }
 }
